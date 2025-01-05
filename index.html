@@ -61,29 +61,10 @@
 </head>
 <body>
 
-  <h1>Welcome to the Party!</h1>
-  <h2>Current users: <span id="user-count">0</span></h2>
+  <h1>Welcome to the the website!</h1>
+  
 
-  <div class="user-count">
-    <p>Total number of users joined: <span id="user-count-display">0</span></p>
-  </div>
+  
 
 
-  <!-- Music player (hidden) -->
-  <audio id="bg-music" class="music-player" loop autoplay>
-    <source src="temshop.mp3" type="audio/mpeg"> <!-- Replace with your music file -->
-    Your browser does not support the audio element.
-  </audio>
-
-  <script>
-    let userCount = 0;
-
-    // Function to update the user count when the page loads
-    window.onload = function() {
-      // Simulating the number of users joined. In a real-world application, this should be done via server.
-      userCount = Math.floor(Math.random() * 100) + 1;  // Generate a random user count between 1 and 100
-      document.getElementById('user-count').textContent = userCount;
-      document.getElementById('user-count-display').textContent = userCount;
-    };
-
-    // Function to display an alert with the user's n
+ 
