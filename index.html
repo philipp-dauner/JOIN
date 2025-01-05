@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Party!</title>
+  <style>
+    body {
+      background-image: url('doge.png'); /* Replace with your PNG image */
+      background-repeat: repeat;
+      font-family: 'Courier New', Courier, monospace;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      font-size: 18px;
+      height: 100vh;
+    }
+
+    h1 {
+      color: lime;
+      text-shadow: 2px 2px 5px red;
+      font-size: 3rem;
+    }
+
+    h2 {
+      color: yellow;
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    button {
+      background-color: #333;
+      color: #00FF00;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: 2px solid lime;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 0 10px lime;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: lime;
+      color: black;
+      box-shadow: 0 0 20px #00FF00;
+    }
+
+    .user-count {
+      font-size: 1.2rem;
+      margin-top: 20px;
+      color: cyan;
+    }
+
+    .music-player {
+      display: none; /* Hide music controls */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to the Party!</h1>
+  <h2>Current users: <span id="user-count">0</span></h2>
+
+  <div class="user-count">
+    <p>Total number of users joined: <span id="user-count-display">0</span></p>
+  </div>
+
+
+  <!-- Music player (hidden) -->
+  <audio id="bg-music" class="music-player" loop autoplay>
+    <source src="temshop.mp3" type="audio/mpeg"> <!-- Replace with your music file -->
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    let userCount = 0;
+
+    // Function to update the user count when the page loads
+    window.onload = function() {
+      // Simulating the number of users joined. In a real-world application, this should be done via server.
+      userCount = Math.floor(Math.random() * 100) + 1;  // Generate a random user count between 1 and 100
+      document.getElementById('user-count').textContent = userCount;
+      document.getElementById('user-count-display').textContent = userCount;
+    };
+
+    // Function to display an alert with the user's n
